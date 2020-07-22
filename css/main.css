@@ -1,0 +1,67 @@
+body {
+    display: grid;
+    grid-template-columns: 200px 1fr 250px;
+    grid-template-areas:
+        "header header header"
+        "menu content messenger"
+        "footer footer footer";
+}
+header {
+    padding: 10px;
+    background-color: #36f;
+    color: white;
+    grid-area: header;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.menu {
+    grid-area: menu;
+    background-color: #888;
+}
+.messenger {
+    grid-area: messenger;
+    background-color: #888;
+
+}
+footer {
+    background-color: #444;
+    grid-area: footer;
+}
+
+.feed {
+    display: grid;
+    grid-area: content;
+    grid-template-columns: minmax(300px, 1fr);
+    gap: 40px;
+    padding: 80px 40px;
+}
+    .feed > .post {
+        border: 10px solid red;
+    }
+        .feed > .post > .post-header {}
+            .feed > .post > .post-header  > .user-profile-photo {}
+                .feed > .post > .post-header  > .user-profile-photo > img {
+                    width: 300px;
+                }
+            .feed > .post > .post-header  > .user-details {}
+                .feed > .post > .post-header  > .user-details > .author {}
+                    .feed > .post > .post-header  > .user-details > .author > .link {}
+                .feed > .post > .post-header  > .user-details > .time {}
+            .feed > .post > .post-header  > .post-actions {}
+        .feed > .post > .post-content {}
+        .feed > .post > .post-footer {}
+
+
+@media (max-width: 800px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "menu"
+            "content"
+            "messenger"
+            "footer";
+    }
+}
