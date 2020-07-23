@@ -38,20 +38,53 @@ footer {
     padding: 80px 40px;
 }
     .feed > .post {
-        border: 10px solid red;
+        border: 2px solid #ccc;
     }
-        .feed > .post > .post-header {}
-            .feed > .post > .post-header  > .user-profile-photo {}
+        .feed > .post > .post-header {
+            display: grid;
+            grid-template-columns: 70px 1fr 30px;
+            grid-template-areas: "authorPhoto authorDetails authorActions";
+        }
+            .feed > .post > .post-header  > .user-profile-photo {
+                grid-area: authorPhoto;
+                padding: 10px;
+            }
                 .feed > .post > .post-header  > .user-profile-photo > img {
-                    width: 300px;
+                    width: 50px;
+                    height: 50px;
+                    object-fit: cover;
                 }
-            .feed > .post > .post-header  > .user-details {}
-                .feed > .post > .post-header  > .user-details > .author {}
-                    .feed > .post > .post-header  > .user-details > .author > .link {}
-                .feed > .post > .post-header  > .user-details > .time {}
-            .feed > .post > .post-header  > .post-actions {}
+            .feed > .post > .post-header  > .user-details {
+                grid-area: authorDetails;
+                padding: 10px 0;
+            }
+                .feed > .post > .post-header  > .user-details > .author {
+                    line-height: 20px;
+                    margin-bottom: 15px;
+                    font-size: 18px;
+                }
+                    .feed > .post > .post-header  > .user-details > .author > .link {
+                        line-height: inherit;
+                    }
+                .feed > .post > .post-header  > .user-details > .time {
+                    line-height: 15px;
+                    font-size: 14px;
+                }
+            .feed > .post > .post-header  > .post-actions {
+                grid-area: autorActions;
+            }
         .feed > .post > .post-content {}
-        .feed > .post > .post-footer {}
+
+
+        .feed > .post > .post-footer {
+            display: grid;
+            grid-template-columns: 1fr;
+            padding: 0 10px;
+        }
+            .feed > .post > .post-footer > .row {
+                border-top: 1px solid #ccc;
+                padding: 10px;
+            }
 
 
 @media (max-width: 800px) {
