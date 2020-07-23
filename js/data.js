@@ -106,7 +106,7 @@ const posts = [
         author: {
             authorPhoto: 'optimus-prime.jpg',
             authorName: 'Optimus',
-            authorSurname: 'Primer',
+            authorSurname: 'Prime',
             authorLink: 'optimus-prime'
         },
         postTime: '2020-07-22 10:15:17',

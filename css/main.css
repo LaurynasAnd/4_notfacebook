@@ -71,11 +71,110 @@ footer {
                     font-size: 14px;
                 }
             .feed > .post > .post-header  > .post-actions {
-                grid-area: autorActions;
+                grid-area: authorActions;
             }
-        .feed > .post > .post-content {}
 
 
+        .feed > .post > .post-content {
+            display: grid;
+            grid-template-columns: 1fr;
+
+        }
+            .feed > .post > .post-content > p {
+                padding: 10px;
+                font-size: 17px;
+                line-height: 22px;
+            }
+                    .feed > .post > .post-content > p > .read-more,
+                    .feed > .post > .post-content > p > .read-less {
+                        color: #33f;
+                        text-decoration: 1px solid #33f;
+                        cursor: pointer;
+                    }
+            .feed > .post > .post-content > p.background{
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+            }
+            .feed > .post > .post-content > p.hidden{
+                display: none;
+            }
+            
+            .feed > .post > .post-content > p.big-text{
+                background-color: red;
+                font-size: 20px;
+                line-height: 40px;
+            }
+            .feed > .post > .post-content > .gallery {
+                width: 100%;
+                height: 250px;
+                position: relative;
+            }
+                .feed > .post > .post-content > .gallery > img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            .feed > .post > .post-content > .gallery.gallery-2  {
+                width: 100%;
+                height: 300px;
+                
+            }
+                .feed > .post > .post-content > .gallery.gallery-2 > img {
+                    width: 50%;
+                    height: 100%;
+                    float: left;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            .feed > .post > .post-content > .gallery.gallery-3  {
+                width: 100%;
+                height: 450px;
+                
+            }
+                .feed > .post > .post-content > .gallery.gallery-3 > img {
+                    width: 50%;
+                    height: 50%;
+                    float: left;
+                    object-fit: cover;
+                    object-position: center;
+                }
+                    .feed > .post > .post-content > .gallery.gallery-3 > img:first-child {
+                        width: 100%;
+                    }
+            .feed > .post > .post-content > .gallery.gallery-4  {
+                width: 100%;
+                height: 450px;
+                
+            }
+                .feed > .post > .post-content > .gallery.gallery-4 > img {
+                    width: 50%;
+                    height: calc(100% / 3);
+                    float: left;
+                    object-fit: cover;
+                    object-position: center;
+                }
+                    .feed > .post > .post-content > .gallery.gallery-4 > img:first-child {
+                        height: 100%;
+                    }
+
+                .feed > .post > .post-content > .gallery > .extra {
+                    width: 50%;
+                    height: calc(100% / 3);
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    background-color: #33333388;
+                    color: #fff;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 60px;
+                }
+            
         .feed > .post > .post-footer {
             display: grid;
             grid-template-columns: 1fr;
