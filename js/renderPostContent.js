@@ -7,7 +7,6 @@ function renderPostContent (data) {
     
     let HTML = '';
     if (data.postText) {
-        console.log('sup');
         if (!data.postPhotos & data.postBackground) {
             HTML += renderTextWithBackground(data.postText, data.postBackground);
         } else{
